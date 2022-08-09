@@ -1,0 +1,16 @@
+<div class="search-container">
+    <span class="logo" >Dev Vashisth</span>
+    <span class="exit" routerLink="/">logout</span>
+</div>
+<br>
+<hr>
+<iframe class="video-frame" width="750" height="400" [src]="videoUrl | safeUrl" frameborder="10" allowfullscreen> </iframe>
+<div class="combox" >
+<textarea maxlength="200" #comment >Comment here</textarea>
+<button class="button" (click)="send(comment.value)">Post</button>
+</div>
+<hr>
+<p class="title">Comments</p>
+<div class="com-container" *ngFor="let comment of postcomment">
+    <p>{{comment}}</p>
+</div>

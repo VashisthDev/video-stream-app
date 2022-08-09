@@ -1,0 +1,18 @@
+<body>
+    <div id="login-page" class="container open">
+    <h1>Dev Vashisth</h1>
+    <form>
+    <div class="form-set">
+        <div class="form-group">
+            <label class="form-label" >User Name</label>
+            <input type="text" required id="username"  #username >
+        </div>
+        <div class="form-group">
+            <label class="form-label">Password</label>
+            <input type="text" required id="password"  #password>
+        </div>
+        <button class="btn" (click)="login(username.value,password.value)" >Log in</button>
+    </div> 
+    <label class ="error" *ngIf="(flag==true)">Invalid ID or password</label>
+    </form>  
+    </div> 
